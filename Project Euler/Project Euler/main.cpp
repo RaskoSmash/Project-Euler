@@ -34,7 +34,10 @@ void Q29();
 
 int main()
 {
-	Q1();
+//	Q1();
+//	Q2();
+//	Q3();
+	Q4();
 	system("pause");
 	return 0;
 }
@@ -50,4 +53,58 @@ void Q1()
 		}
 	}
 	std::cout << finalSum;
+}
+
+void Q2()
+{
+	//fib sequence
+	int userInput = 0, next = 0, sumOfEven = 0;
+	int lastTwoNumbers[2] = { 0,1 };
+	std::cin >> userInput;
+	std::cout << lastTwoNumbers[0] << "\n";
+	std::cout << lastTwoNumbers[1] << "\n";
+	for (int i = 0; i < userInput; ++i)
+	{
+		if (next <= 4000000)
+		{
+
+			next = lastTwoNumbers[0] + lastTwoNumbers[1];
+			std::cout << next << "\n";
+			lastTwoNumbers[0] = lastTwoNumbers[1];
+			lastTwoNumbers[1] = next;
+			if (i % 2 == 0)
+				sumOfEven += next;
+		}
+		else
+			break;
+	}
+	std::cout << "Sum of the even terms: " << sumOfEven;
+}
+
+void Q3()
+{
+	//prime factors
+	/*int num = 12;
+	if (num % 2 == 0)
+	{
+		num = num / 2;
+	}
+	std::cout << num;*/
+
+	long long max = 600851475143;
+	long long i = 2;
+	for (i; i <= max; ++i)
+	{
+		while (max % i == 0)
+		{
+			max /= i;
+			std::cout << i << ", ";
+		}
+	}
+	std::cout << "\nMax primed factor is: " << i - 1;
+}
+
+void Q4()
+{
+
 }

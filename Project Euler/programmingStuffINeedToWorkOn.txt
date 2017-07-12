@@ -1,0 +1,9 @@
+getters and setters
+threading
+scriptable objects
+editor scripts
+euler programming questions
+shaders
+save/load files
+
+(obviously more just need to do some research)
